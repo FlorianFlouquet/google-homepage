@@ -3,25 +3,48 @@
     a {
         text-decoration: none;
     }
+    a:visited {
+        color: black;
+    }
     a:hover {
         text-decoration: underline;
+        color:#ad9fa6;
+    }
+    .nine-squares:hover {
+        cursor: pointer;
+        opacity: 100%;
+    }
+    .header {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-top: 10px;
+        padding-right: 20px;
+    }
+    .searchbar:hover {
+        box-shadow: 1px 1px 5px grey;
+    }
+    .button1:hover {
+        color: #0e0c0d;
+        border: 1px solid #ad9fa6;
+        border-radius: 5px;
     }
     .box {
-        width: 450px;
-        height: 300px;
+        width: 600px;
+        height: 400px;
         position: absolute;
         top: 20%;
-        padding-left: 34%;
+        padding-left: 35%;
     }
     input[type=text] {
         width: 95%;
         border: none;
         padding-top: 6px;
+        background-color: white;
     }
     .logo {
-        height: 20px;
-        padding-top: 5px;
-        padding-left: 7px;
+        height: 15px;
+        padding-top: 7px;
+        padding-left: 9px;
         opacity: 70%;
     }
     .searchbar {
@@ -33,45 +56,126 @@
         margin-bottom: 25px;
         border: 1px solid grey;
         border-radius: 25px 25px 25px 25px;
+        border-color: grey;
     }
     .logo-google {
-        padding-left: 20%;
+        padding-left: 27%;
         margin-bottom: 25px;
     }
-    .bodybuttons {
-        padding-left: 20%;
+    .bodybutton {
+        padding-left: 27%;    
+    }
+    .button1 {
+        background-color: #f3f1f2;
+        border: 0px;
+        height: 35px;
+        width: 135px;
+        font-family: Arial;
+        font-size: small;
+        color: #53464d;
+        cursor: pointer;
+    }
+    .button2 {
+        background-color: #4d79ff;
+        height: 30px;
+        width: 95px;
+        color: white;
+        border: none;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: small;
+    }
+    .link1 {
+        font-size: smaller;
+        font-family: arial;
+        margin-right: 15px;
+        padding-top: 5px;
+    }
+    .link2 {
+        margin-right: 15px;
+    }
+    .nine-squares {
+        height: 18px;
+        width: auto;
+        margin-right: 20px;
+        padding-top: 5px;
+        opacity: 70%;
+    }
+    .footer-box1 {
+        background-color: #f0f0f5;
+        border-top: 1px solid grey;
+        height: 40px;
+        width: 100%;
+        display: flex;
+        position: absolute;
+        bottom: 40px;
+    }
+    .footer-box2 {
+        background-color: #f0f0f5;
+        border-top: 1px solid grey;
+        height: 40px;
+        width: 100%;
+        display: flex;
+        position: absolute;
+        bottom: 0px;
+    }
+    .footer-content {
+        padding-top: 10px;
+        padding-left: 25px;
+        font-family: Arial;
+        color: #7c6a73;
     }
 
 </style>
-<html>
-    <head>
-        <div>  
-            <a href="https://www.google.com/intl/fr/gmail/about/">Gmail</a> 
-            <a href="https://www.google.fr/imghp?hl=fr&tab=wi&ogbl">Images</a>
-            <button type="button">Connexion</button> 
-        </div>
-    </head>
-    <body>
-        <div class="box">
-            <div class="logo-google">
-                <img src=https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png alt="logo google.">
-            </div> 
-            <div class="searchbar">
-                <div style="flex-grow: 1">
-                    <img src="https://image.flaticon.com/icons/svg/622/622605.svg" alt="magnifying glass logo." class="logo">
-                </div>
-                <div style="flex-grow: 10">
-                    <form>
-                        <input type="text" id="search" name="search">
-                    </form>
-                </div>
+<title>
+    Google
+</title>
+<head>
+    <div class="header">  
+        <button class="button2">Connexion</button> 
+        <img src="https://image.flaticon.com/icons/svg/37/37142.svg" alt="9 squares icon." class="nine-squares">
+        <a class="link1" href="https://www.google.fr/imghp?hl=fr&tab=wi&ogbl">Images</a>
+        <a class="link1" href="https://www.google.com/intl/fr/gmail/about/">Gmail</a> 
+    </div>
+</head>
+<body>
+    <div class="box">
+        <div class="logo-google">
+            <img src=https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png alt="logo google.">
+        </div> 
+        <div class="searchbar">
+            <div style="flex-grow: 1">
+                <img src="https://image.flaticon.com/icons/svg/622/622605.svg" alt="magnifying glass logo." class="logo">
             </div>
-            <div class="bodybuttons">
-                <button type="button">Recherche Google</button>
-                <button type="button">J'ai de la chance</button>
+            <div style="flex-grow: 10">
+                <form>
+                    <input type="text" id="search" name="search">
+                </form>
             </div>
         </div>
-    </body>
+        <div class="bodybutton">
+            <button class="button1">Recherche Google</button>
+            <button class="button1">J'ai de la chance</button>
+        </div>
+    </div>
     <footer>
+        <div class="footer-box1">
+            <div class="footer-content">
+                France
+            </div>
+        </div>
+        <div class="footer-box2">
+            <div class="footer-content">
+                <a class="link2">Publicité</a>
+                <a class="link2">Entreprise</a>
+                <a class="link2">À propos</a>
+                <a class="link2">Comment fonctionne la recherche Google</a> 
+                <a class="link2">Info consommateurs</a>
+                <a class="link2">Confidentialité</a>
+                <a class="link2">Conditions</a> 
+                <a class="link2">Paramètre</a>
+            </div>
+        </div>
     </footer>
-</html>
+</body>
+
