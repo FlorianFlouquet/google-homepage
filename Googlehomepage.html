@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <style>
+    body {
+        overflow: hidden;
+    }
     a {
         text-decoration: none;
     }
@@ -9,6 +12,7 @@
     a:hover {
         text-decoration: underline;
         color:#ad9fa6;
+        cursor: pointer;
     }
     .nine-squares:hover {
         cursor: pointer;
@@ -36,21 +40,25 @@
         padding-left: 35%;
     }
     input[type=text] {
-        width: 95%;
+        width: 102%;
+        height: 10px;
         border: none;
-        padding-top: 6px;
+        position: relative;
+        padding-top: 15px;
+        margin-left: -30px;
         background-color: white;
     }
     .logo {
-        height: 15px;
-        padding-top: 7px;
+        height: 17px;
+        padding-top: 10px;
         padding-left: 9px;
         opacity: 70%;
     }
     .searchbar {
         width: 100%;
-        height: 30px;
+        height: 35px;
         opacity: 70%;
+        position: relative;
         display: flex;
         flex-direction: row;
         margin-bottom: 25px;
@@ -63,7 +71,8 @@
         margin-bottom: 25px;
     }
     .bodybutton {
-        padding-left: 27%;    
+        padding-left: 27%;   
+        position: relative; 
     }
     .button1 {
         background-color: #f3f1f2;
@@ -109,19 +118,33 @@
         display: flex;
         position: absolute;
         bottom: 40px;
+        left: 0px;
     }
     .footer-box2 {
         background-color: #f0f0f5;
         border-top: 1px solid grey;
         height: 40px;
-        width: 100%;
+        width: 50%;
         display: flex;
         position: absolute;
         bottom: 0px;
+        left: 0px;
+    }
+    .footer-box3 {
+        background-color: #f0f0f5;
+        border-top: 1px solid grey;
+        height: 40px;
+        width: 50%;
+        display: flex;
+        flex-direction: row-reverse;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
     }
     .footer-content {
         padding-top: 10px;
         padding-left: 25px;
+        position: absolute;
         font-family: Arial;
         color: #7c6a73;
     }
@@ -158,24 +181,29 @@
             <button class="button1">J'ai de la chance</button>
         </div>
     </div>
-    <footer>
-        <div class="footer-box1">
-            <div class="footer-content">
-                France
-            </div>
-        </div>
-        <div class="footer-box2">
-            <div class="footer-content">
-                <a class="link2">Publicité</a>
-                <a class="link2">Entreprise</a>
-                <a class="link2">À propos</a>
-                <a class="link2">Comment fonctionne la recherche Google</a> 
-                <a class="link2">Info consommateurs</a>
-                <a class="link2">Confidentialité</a>
-                <a class="link2">Conditions</a> 
-                <a class="link2">Paramètre</a>
-            </div>
-        </div>
-    </footer>
 </body>
+<footer>
+    <div class="footer-box1">
+        <div class="footer-content">
+            France
+        </div>
+    </div>
+    <div class="footer-box2">
+        <div class="footer-content">
+            <a class="link2">Publicité</a>
+            <a class="link2">Entreprise</a>
+            <a class="link2">À propos</a>
+            <a class="link2">Comment fonctionne la recherche Google</a> 
+        </div>
+    </div>
+    <div class="footer-box3">
+        <div class="footer-content">
+            <a class="link2">Info consommateurs</a>
+            <a class="link2">Confidentialité</a>
+            <a class="link2">Conditions</a> 
+            <a class="link2">Paramètres</a>
+        </div>
+    </div>
+</footer>
+
 
